@@ -8,11 +8,11 @@ from IPython.display import VimeoVideo
 yfin.pdr_override()
 
 # 設定開始和結束時間
-start = datetime.date.today() - datetime.timedelta(days=5*365)
+start = datetime.date.today() - datetime.timedelta(days=5)
 end = datetime.date.today()
 
 # 從Yahoo Finance抓取資料
-df = web.DataReader(["AMZN", "F", "BTC-USD"], start, end)['Adj Close']
+df = web.DataReader(["TSMC34.SA"], start, end)['Adj Close']
 
 # 檢視前幾行數據以確認數據的正確性
 print(df.head())
